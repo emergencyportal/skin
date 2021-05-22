@@ -1,0 +1,237 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Skin Cancer Detector</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/additional-methods.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+</head>
+
+<body>
+<style>
+ body
+{
+background-color: rgba(67, 67, 67, 0.582);
+ color: honeydew;
+}
+ 
+.navbar {
+	background-color:#0d0533; ;
+	overflow: hidden;
+  }
+.dropdown:hover>.dropdown-menu
+{
+display: block;
+transition:0.6s ease;
+}
+.logo{
+	float:left;
+	width:60px;
+	height:auto;
+}
+ 
+.collapse ul li a:hover
+{
+	background-color:rgb(5, 5, 36);
+	color: rgb(255, 255, 255);
+}
+.navbar-nav a{
+	font-family: Monospace;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+h3.h3{text-align:center;margin:1em;text-transform:capitalize;font-size:1.7em;}
+.input{
+width:150px;
+}
+ 
+
+.footer-classic a, .footer-classic a:focus, .footer-classic a:active {
+    color: #ffffff;
+}
+.nav-list li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.nav-list li a:hover:before {
+    margin-left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 23px;
+    font: 900 13px/1 "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+}
+.social-container .col {
+    border: 1px solid #007b5e;
+}
+.nav-list li a:before {
+    content: "\f14f";
+    font: 400 21px/1 "Material Design Icons";
+    color: #4d6de6;
+    display: inline-block;
+    vertical-align: baseline;
+    margin-left: -28px;
+    margin-right: 7px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .22s ease;
+}
+ 
+ 
+  
+
+</style>
+    <header>
+        <section id="home" class="home-area">	
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <a class="navbar-brand" href="#"><img class ="logo"src="../static/2.png"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="container-fluid">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="https://emergencyportal.000webhostapp.com/Home.html">Home  </span></a>
+      </li>
+       <li class="nav-item active">
+          <a class="nav-link" href="https://emergencyportal.000webhostapp.com/Prod.php">Products</span></a>
+        </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="https://emergencyportal.000webhostapp.com/About.html">About us</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="https://emergencyportal.000webhostapp.com/Contact.html">Contact us</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="https://emergencyportal.000webhostapp.com/login.html">Sign Up/In</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="https://emergencyportal.000webhostapp.com/Bookings.html">Bookings</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="https://emergencyportal.000webhostapp.com/Emergency.html">Emergency</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="https://emergencyportal.000webhostapp.com/Disease.html">Disease</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="https://emergencyportal.000webhostapp.com/stranded.html">Stranded</span></a>
+      </li>
+    </ul>
+    
+
+    <div class="d-flex flex-row order-2 order-sm-3">
+    
+
+     
+          
+			<ul class=" navbar-nav flex-row">
+				<li class="nav-item-active">
+					<a class="nav-link px-2" href=""><i class="fab fa-facebook-f"></i></a>
+				</li>
+				<li class="nav-item-active">
+					<a class="nav-link px-2" href=""><i class="fab fa-twitter"></i></a>
+				</li>
+				<li class="nav-item-active">
+					<a class="nav-link px-2" href=""><i class="fab fa-instagram"></i></a>
+				</li>
+				 
+     
+			</ul>
+
+		</div>
+</nav>
+ 
+</section>
+  
+    </header>
+    <div class="container">
+	<div class="text-center">
+	<p>Hello</p>
+        <div id="content" style="margin-top:2em">{% block content %}{% endblock %}</div>
+    </div>
+	</div>
+</body>
+
+<footer>
+<footer class="section footer-classic context-dark bg-image" style="background: #0d0533;">
+  <br>
+  <div class="container">
+    <div class="row row-30">
+      <div class="col-md-4 col-xl-5">
+        <div class="pr-xl-4"><a class="brand" href="Home.html"><img class="brand-logo-light" src="../static/2.png" alt="" width="100" height="87"  ></a>
+          <p>We are certified award winners from many pharmaceutical institutes and we guarantee you the best delivery in minimal time.Patients trust is important, even online. When it comes to the doctors, a patient has to feel good and secure around them. FCB will boost your online presence with a big emphasis on satisfying customer needs</p>
+          <!-- Rights-->
+          <p class="rights"><span>©  </span><span class="copyright-year">2020</span><span> </span><span>FCB</span><span>. </span><span>All Rights Reserved.</span></p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h5>Contacts</h5>
+        <dl class="contact-list">
+          <dt>Address:</dt>
+          <dd>Blue Area,Islamabad</dd>
+        </dl>
+        <dl class="contact-list">
+          <dt>email:</dt>
+           <dd><a href="mailto:#">EmergencyPortal@gmail.com</a></dd>
+        </dl>
+        <dl class="contact-list">
+          <dt>phones:</dt>
+          <dd>090078601
+          </dd>
+        </dl>
+      </div>
+      <div class="col-md-4 col-xl-3">
+        <h5>Quick Links</h5>
+        <ul class="nav-list">
+          <li><a href="https://emergencyportal.000webhostapp.com/Home.html">Home</a></li>
+          <li><a href="https://emergencyportal.000webhostapp.com/Prod.php">Products</a></li>
+          <li><a href="https://emergencyportal.000webhostapp.com/About.html">About Us</a></li>
+          <li><a href="https://emergencyportal.000webhostapp.com/Contact.html">Contact US</a></li>
+          <li><a href="https://emergencyportal.000webhostapp.com/login.html">Sign Up</a></li>
+		  <li><a href="https://emergencyportal.000webhostapp.com/Bookings.html">Bookings</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+      <ul class="list-unstyled list-inline social text-center">
+        <li class="list-inline-item">	<a class="nav-link px-2" href=""><i class="fab fa-facebook-f"></i></a></li>
+        <li class="list-inline-item"><a class="nav-link px-2" href=""><i class="fab fa-twitter"></i></a></li>
+        <li class="list-inline-item"><a class="nav-link px-2" href=""><i class="fab fa-instagram"></i></a></li>
+        <li class="list-inline-item"><a class="nav-link px-2" href=""><i class="fab fa-google-plus"></i></a></li>
+        <li class="list-inline-item"><a class="nav-link px-2" href=""><i class="fa fa-envelope"></i></a></li>
+      </ul>
+    </div>
+</footer>
+    <script src="{{ url_for('static', filename='js/main.js') }}" type="text/javascript"></script>
+</footer>
+
+</html>

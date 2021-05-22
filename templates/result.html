@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<html>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+<body>
+ 
+<br><br>
+  <p style="text-align:center;" >Prediction: <b>{{result.get("class")}}</b></p>
+<table class="center" style=" margin-left: auto; margin-right: auto;">
+  <thead >
+    <tr style="text-align:center">
+      <th scope="col">Lesion type</th>
+      <th scope="col">Confidence</th>
+    </tr>
+  </thead>
+  <tbody>
+    {%for i in range(0, 7)%}
+    <tr >
+      <th scope="row">{{result.get("probs")[i][0]}}</th>
+      <td style="text-align:center">{{result.get("probs")[i][1]}}</td>
+     
+    </tr>
+    {%endfor%}
+  </tbody>
+</table>
+<br>
+
+</body>
+<figure class="center" class="figure">
+  <img src="data:image/png;base64, {{result.get('image')}}"  width="150" height="150" class="figure-img img-thumbnail input-image">
+</figure>
+ 
+</html>
+
+{% endblock %}
